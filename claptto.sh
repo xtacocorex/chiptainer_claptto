@@ -14,8 +14,7 @@ docker rm claptto
 docker pull xtacocorex/chiptainer_claptto
 
 # REMOVE OLD CONTIANER
-oldid=`docker images | grep "<none>" | tr -s " " | cut -d " " -f 3`
-docker rmi $oldid
+docker rmi `docker images | grep chiptainer_claptto | grep "<none>" | tr -s " " | cut -d " " -f 3`
 
 # RUN THE CONTAINER
 docker run \
