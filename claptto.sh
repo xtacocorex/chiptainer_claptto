@@ -19,7 +19,6 @@ docker rmi `docker images | grep chiptainer_claptto | grep "<none>" | tr -s " " 
 # RUN THE CONTAINER
 docker run \
          --rm \
-         -it \
          --name claptto \
          --privileged \
          --cap-add SYS_RAWIO \
