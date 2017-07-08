@@ -4,8 +4,7 @@
 set_antenna ufl
 
 # MAKE DIRECTORY FOR PICTURES
-mkdir -p /mnt/pictures
-mkdir -p /mnt/tmp_images
+mkdir -p /data/pictures
 
 # REMOVE ANY PREVIOUS INSTANCE OF THE CONTAINER
 docker rm claptto
@@ -25,5 +24,5 @@ docker run \
          --device /dev/mem \
          --device /dev/video0 \
          -v /sys:/sys \
-         --volume=/mnt/pictures:/mnt/pictures \
+         --volume=/data/pictures:/data/pictures \
          xtacocorex/chiptainer_claptto:latest
